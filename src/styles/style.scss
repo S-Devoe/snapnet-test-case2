@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "helvetica";
+  src: url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf")
+      format("woff"),
+    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf")
+      format("opentype"),
+    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf")
+      format("truetype");
+}
+
+*,
+*::after,
+*::before,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// variables
+$deep-blue-color: "#240D57";
+$paragraph-text-color: "#4F4F4F";
+
+// main styles
+
+section {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-inline: 170px;
+    gap: 250px;
+
+    .movie-content {
+      img {
+        height: 700px;
+      }
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-family: "Helvetica";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 64px;
+
+        /* or 100% */
+        text-align: right;
+
+        color: $deep-blue-color;
+
+        span {
+          display: block;
+          background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+
+      .bottom-text {
+        margin-block: 16px 52px;
+        font-family: "Helvetica";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+        color: $paragraph-text-color;
+      }
+
+      button {
+        align-self: flex-end;
+        background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+        border-radius: 10px;
+        width: 320px;
+        height: 55px;
+        border: 0;
+        outline: 0;
+        color: white;
+        font-family: "Helvetica";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        cursor: pointer;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column-reverse;
+      gap: unset;
+      position: relative;
+      margin-top: 40px;
+
+      .movie-content {
+        margin-bottom: 90px;
+        img {
+          height: 450px;
+        }
+      }
+
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-family: "Helvetica";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 64px;
+
+          text-align: center;
+        }
+
+        .bottom-text {
+          margin-block: 16px 52px;
+          text-align: center;
+        }
+
+        button {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          font-size: 20px;
+          line-height: 23px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: unset;
+      justify-content: unset;
+      position: relative;
+      margin-top: 20px;
+      margin-inline: 20px;
+
+      .movie-content {
+        margin-bottom: 50px;
+        img {
+          height: 250px;
+        }
+      }
+
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 36px;
+
+          text-align: center;
+        }
+
+        .bottom-text {
+          margin-block: 16px 52px;
+          font-family: "Helvetica";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 18px;
+          text-align: center;
+          color: $paragraph-text-color;
+        }
+
+        button {
+          position: absolute;
+          bottom: -40px;
+          margin: auto;
+          left: 0;
+          right: 0;
+          width: 187px;
+          height: 50px;
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
